@@ -1,0 +1,13 @@
+---
+
+- name: Get sonar-scanner
+  unarchive:
+    src: "https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-{{ sonarscanner_version }}-linux.zip"
+    dest: "{{ sonarscanner_destination_dir }}"
+    remote_src: yes
+    validate_certs: no
+
+- name: Configure sonar-scanner
+  template:
+    src: sonar-scanner.j2
+    dest: "{{ sonarscanner_destination_dir }}/sonar-scanner-{{ sonarscanner_version }}-linux/conf/sonar-scanner.properties"

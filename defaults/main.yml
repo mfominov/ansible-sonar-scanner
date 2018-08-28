@@ -1,0 +1,7 @@
+---
+
+sonarscanner_destination_dir: "/opt"
+sonarscanner_version: "3.2.0.1227"
+sonar_server_url: "https://sonar.gbc.dmz2.luxoft.com/"
+sonar_login: "sonar-scaner"
+sonar_password: "sonar-scaner"
